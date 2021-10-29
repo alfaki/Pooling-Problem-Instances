@@ -1,0 +1,28 @@
+############### ARBITRARY NETWORK POOLING PROBLEM INSTANCES ####################
+These pooling problem instances are used in the experiments section of the paper 
+by Alfaki and Haugland (2013). All the instances and the formulations have been 
+written in GAMS.
+
+HOW TO RUN THE TEST INSTANCES:
+    I. SYSTEM REQUIREMENT:
+        1. Windows/Unix.
+        2. GAMS modeling system
+        3. Global NLP solver (e.g., BARON).
+   II. RUN AN INSTANCE:
+        1. The default NLP solver is BARON, you can change it in one of the 
+           formulation files; pmodel.gms, hybmodel.gms and mcfmodel.gms.
+        2. Write the name of the formulation that you want to use in the first
+           line of the file 'xmodel.gms' e.g., if the formulation you want to 
+           use is MCF-formulation, then the first line of 'xmodel.gms' will 
+           look like:
+
+           $include mcfmodel.gms
+
+        3. Suppose you want solve instance gppL1, so in the terminal (windows 
+           command prompt) write:
+           [pooling_instance_DIR]$ gams gppL1.gms 
+
+Alfaki, M., and Haugland, D. (2013). A multi-commodity flow formulation for the 
+generalized pooling problem. Journal of Global Optimization, 56(3): 917-937.
+doi: 10.1007/s10898-012-9890-7.
+################################################################################
